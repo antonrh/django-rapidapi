@@ -3,6 +3,13 @@ name = "django-rapidapi"
 version = "0.1.0-dev0"
 description = "Django API extension"
 authors = ["Anton Ruhlov <antonruhlov@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/antonrh/django-apirouter"
+keywords = ["django", "api", "rest"]
+packages = [
+    { include = "rapidapi", from = "." },
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
