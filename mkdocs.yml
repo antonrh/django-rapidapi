@@ -1,0 +1,24 @@
+site_name: Django RapidAPI
+site_description: Django RapidAPI
+site_author: Anton Ruhlov
+site_url: https://github.com/antonrh/django-rapidapi
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: green
+
+plugins:
+  - search
+
+repo_name: antonrh/django-rapidapi
+repo_url: https://github.com/antonrh/django-rapidapi
+edit_uri: ""
+
+nav:
+  - Introduction: index.md
+
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
