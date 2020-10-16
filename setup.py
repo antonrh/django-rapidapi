@@ -1,14 +1,13 @@
 import os
-import sys
 
-from setuptools import find_packages, setup
+from setuptools import setup
 
 root_path = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(root_path, "README.md")) as f:
     README = f.read()
 
-EXTRAS_REQUIRE: dict = {
+EXTRAS_REQUIRE = {
     "tests": [
         "pytest>=6.1.1,<7.0.0",
         "pytest-cov>=2.10.1,<2.11.0",
@@ -18,10 +17,13 @@ EXTRAS_REQUIRE: dict = {
         "mypy>=0.790,<1.0",
         "flake8>=3.8.4,<3.9.0",
         "isort>=5.6.4,<6.0.0",
-        "black>=20.8b1,20.9",
+        "black>=20.8b1,<20.9",
         "safety>=1.9.0,<1.10.0",
     ],
-    "docs": [],
+    "docs": [
+        "mkdocs>=1.1.2,<1.2.0",
+        "mkdocs-material>=6.0.2,<6.1.0",
+    ],
 }
 
 EXTRAS_REQUIRE["dev"] = (
@@ -44,10 +46,13 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
-    packages=find_packages("src"),
-    package_dir={"": "src"},
+    packages=["rapidapi"],
+    package_data={"rapidapi": ["py.typed"]},
     include_package_data=True,
     zip_safe=False,
-    install_requires=[],
+    install_requires=[
+        "django>=3.1,<3.2",
+        "pydantic>=1.6.1,<1.7.0",
+    ],
     extras_require=EXTRAS_REQUIRE,
 )

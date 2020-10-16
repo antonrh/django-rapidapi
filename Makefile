@@ -15,5 +15,5 @@ fmt format: ## Run code formatters
 	isort rapidapi tests
 	black rapidapi tests
 
-requirements:  ## Make requirements
-	poetry export -f requirements.txt -E docs > requirements.docs.txt
+install: ## Install dependencies
+	pip install -e .
