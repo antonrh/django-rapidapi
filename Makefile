@@ -17,3 +17,6 @@ fmt format: ## Run code formatters
 
 install: ## Install dependencies
 	pip install -e .[dev]
+
+test: ## Run tests
+	pytest --cov=rapidapi
