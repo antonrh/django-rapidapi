@@ -16,4 +16,4 @@ fmt format: ## Run code formatters
 	black rapidapi tests
 
 install: ## Install dependencies
-	pip install -e .
+	pip install -e .[dev]
