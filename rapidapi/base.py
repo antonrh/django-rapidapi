@@ -1,7 +1,7 @@
 from types import ModuleType
 from typing import Callable, List, Optional, Tuple
 
-from django.urls import path, include
+from django.urls import include, path
 from django.utils.functional import cached_property
 
 from rapidapi.routing import Router

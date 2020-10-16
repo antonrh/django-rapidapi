@@ -1,8 +1,8 @@
 import pytest
 from django.http import HttpResponse
 
-from rapidapi.routing import Router
 from rapidapi.base import RapidAPI
+from rapidapi.routing import Router
 
 
 @pytest.fixture()

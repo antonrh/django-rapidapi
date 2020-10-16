@@ -104,7 +104,7 @@ class Router:
         return self.route(path, methods=["TRACE"], name=name)
 
     def _iter_views(self) -> Iterator[Tuple[str, Callable, Optional[str]]]:
-        for path, routes in self.routes.items():
+        for pattern, routes in self.routes.items():
             if len(routes) == 1:
                 route = routes[0]
                 view = route.view_func
@@ -123,4 +123,4 @@ class Router:
                 ).as_view()
                 name = None
 
-            yield path, view, name
+            yield pattern, view, name
