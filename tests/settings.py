@@ -1,4 +1,8 @@
-SECRET_KEY = "secret"
 DEBUG = True
+SECRET_KEY = "secret"
+
 ROOT_URLCONF = "tests.urls"
-WSGI_APPLICATION = "tests.wsgi.application"
+
+INSTALLED_APPS = [
+    "rapidapi",
+]

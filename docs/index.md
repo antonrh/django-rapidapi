@@ -1,6 +1,6 @@
 Django Rapid API extension.
 
-*Inspired by [FastAPI](https://fastapi.tiangolo.com/) and [Django Rest Framework](https://www.django-rest-framework.org/).*
+*Inspired by [FastAPI](https://fastapi.tiangolo.com/).*
 
 ![tests](https://github.com/antonrh/django-rapidapi/workflows/tests/badge.svg)
 [![codecov](https://codecov.io/gh/antonrh/django-rapidapi/branch/master/graph/badge.svg)](https://codecov.io/gh/antonrh/django-rapidapi)

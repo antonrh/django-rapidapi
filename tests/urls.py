@@ -1,5 +1,7 @@
 from django.urls import path
 
-from tests.endpoints import ProductsEndpoint
+from tests.api import api
 
-urlpatterns = [path("", ProductsEndpoint.as_view(), name="products")]
+urlpatterns = [
+    path("api/", api.urls),
+]
