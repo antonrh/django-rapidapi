@@ -25,6 +25,29 @@ Install using `pip`:
 pip install django-rapidapi
 ```
 
+## Quick start
+
+*urls.py*
+
+```python
+from django.http import HttpRequest, HttpResponse
+from django.urls import path
+
+import rapidapi
+
+api = rapidapi.RapidAPI()
+
+
+@api.get("")
+def hello(request: HttpRequest):
+    return HttpResponse("Hello, RapidAPI")
+
+
+urlpatterns = [
+    path("api/", api.urls),
+]
+```
+
 ## TODO:
 
 * Documentation
